@@ -1,0 +1,23 @@
+.Header{
+    background-color: rgb(255, 184, 92);
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.Nav{
+    width: 500px;
+    height: 50%;
+    margin-left: 1000px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.Links{
+    padding: 20px;
+    margin:auto;
+}
+
+.Title{
+    margin-left: 20px;
+    font-size: 35px;
+}

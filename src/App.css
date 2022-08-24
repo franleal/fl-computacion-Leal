@@ -2,31 +2,8 @@ body{
     background-color: rgb(124, 120, 120);
 }
 
-.App{
-   background-color: rgb(255, 184, 92);
-   display: flex;
-   flex-wrap: wrap;
-}
-
-.Header{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.Nav{
-    width: 500px;
-    height: 50%;
-    margin-left: 1000px;
-    margin-top: 30px;
-    font-size: 20px;
-}
-
-.Links{
-    padding: 20px;
-    margin:auto;
-}
-
-.Title{
-    margin-left: 20px;
-    font-size: 35px;
+.CartItem{
+    margin: auto;
+    font-size: 25px;
+    padding-right: 15px;
 }
