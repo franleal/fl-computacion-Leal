@@ -1,4 +1,5 @@
 import "../ItemListContainer/ItemListContainer.css"
+import { Counter } from "../ItemListContainer/ItemCount"
 
 export const ItemList = () =>{
 
@@ -6,6 +7,7 @@ export const ItemList = () =>{
         <div className="ItemContainer">
             <h2>Producto:</h2>
             <p>Precio:</p>
+            <Counter maxStock={20} Initial={0}/>
         </div>
     )
 }
