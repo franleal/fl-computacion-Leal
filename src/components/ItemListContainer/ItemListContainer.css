@@ -1,8 +1,9 @@
-.ItemContainer{
+.ItemListContainer{
     background-color: burlywood;
-    width: 200px;
-    height: 400px;
+    width: 100%;
+    min-height: 400px;
     margin: auto;
+    margin-top: 30px;
 }
 
 .span-counter{

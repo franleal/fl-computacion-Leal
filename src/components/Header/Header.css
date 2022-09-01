@@ -2,6 +2,7 @@
     background-color: rgb(255, 184, 92);
    display: flex;
    flex-wrap: wrap;
+   height: 100px;
 }
 
 .Nav{

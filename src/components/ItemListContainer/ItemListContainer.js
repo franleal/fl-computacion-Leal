@@ -1,13 +1,30 @@
 import "../ItemListContainer/ItemListContainer.css"
-import { Counter } from "../ItemListContainer/ItemCount"
+import { useEffect, useState } from "react"
+import { ItemList } from "../ItemList/ItemList"
+import { llamadoItem } from "../../funcionesExtras/LlamadoItems"
 
-export const ItemList = () =>{
+export const ItemListContainer = () =>{
+    
+    const [Productos,setProductos] = useState ([])
 
-    return(
-        <div className="ItemContainer">
-            <h2>Producto:</h2>
-            <p>Precio:</p>
-            <Counter maxStock={20} Initial={0}/>
+    useEffect(()=>{
+        llamadoItem()
+            .then ((resp) => {
+                setProductos(resp)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+            .finally(()=>{
+
+            })
+
+    },[])
+
+    return( 
+        <div className="ItemListContainer">
+            <ItemList productos = {Productos}/>
         </div>
+        
     )
 }

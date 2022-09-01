@@ -1,0 +1,11 @@
+.ItemContainer{
+    width: 100%;
+    
+}
+
+.ItemContainer__Child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}

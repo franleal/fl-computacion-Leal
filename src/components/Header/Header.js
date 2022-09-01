@@ -1,5 +1,5 @@
 import './Header.css';
-import  { Carrito } from '../CartWidget';
+import  { Carrito } from '../CartWidget/CartWidget';
 
 export const Header = () =>{
     return(
