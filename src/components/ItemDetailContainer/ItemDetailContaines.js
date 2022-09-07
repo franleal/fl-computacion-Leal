@@ -1,15 +1,17 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { useParams } from "react-router-dom"
-import {ItemDetail} from "../ItemDetail/ItemDetail"
 import { llamadoItem } from "../../funcionesExtras/LlamadoItems"
-import { useEffect} from "react"
+import {ItemDetail} from "../ItemDetail/ItemDetail"
+import "./ItemDetailContainer.css"
 
 
 export const ItemDetailContainer = () =>{
 
+    const [ItemDetailC,setItemDetailC] = useState (null)
     const {categoryId} = useParams()
 
-    const [ItemDetailC,setItemDetailC] = useState (null)
+    console.log(categoryId)
+    console.log(ItemDetailC)
 
     useEffect(()=>{
         llamadoItem()
@@ -26,7 +28,7 @@ export const ItemDetailContainer = () =>{
     },[categoryId])
 
     return( 
-        <div >
+        <div className="itemDetailC">
             <ItemDetail itemC = {ItemDetailC} />
         </div>
         

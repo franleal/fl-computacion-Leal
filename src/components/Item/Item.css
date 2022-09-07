@@ -1,7 +1,6 @@
-.Item{
-    width: 450px;
-    height: 300px;
+.card{
+    width: 18rem;
     margin: 30px;
-    padding: 20px;
-    border: solid black 1px;
+    padding: 10px;
+    background-color: rgb(175, 89, 89);
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import "./counter.css"
 
 export const Counter = ({maxStock,Initial}) =>{
 
@@ -21,7 +22,7 @@ export const Counter = ({maxStock,Initial}) =>{
 
     return(
         <div className="CounterContainer">
-            <p>Producto</p>
+            <p>Agregar producos</p>
 
             <Button variant="success" onClick={incremento}>+</Button>{' '}
             <span className='span-counter'>{counter}</span>

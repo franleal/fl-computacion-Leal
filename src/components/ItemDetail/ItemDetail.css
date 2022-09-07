@@ -1,0 +1,45 @@
+.itemDetail{
+    width: 70%;
+    min-height: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    margin-top: 30px ;
+    margin-bottom: 30px ;
+}
+
+.itemDetailInfo{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin: 30px;
+}
+
+.tituloProducto{
+    margin-bottom: 60px;
+}
+
+.info{
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.contador{
+    margin-top: 60px;
+}
+
+.img{
+    width: 600px;
+    height: 550px;
+    background-size:cover;
+}
+
+hr{
+    color: white;
+    margin: 30px;
+    width: 80%;
+    margin-left: 200px;
+    font-size: 10px;
+}
