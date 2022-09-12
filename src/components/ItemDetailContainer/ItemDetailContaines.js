@@ -10,8 +10,7 @@ export const ItemDetailContainer = () =>{
     const [ItemDetailC,setItemDetailC] = useState (null)
     const {categoryId} = useParams()
 
-    console.log(categoryId)
-    console.log(ItemDetailC)
+    
 
     useEffect(()=>{
         llamadoItem()
