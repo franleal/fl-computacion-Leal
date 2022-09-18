@@ -11,7 +11,7 @@ export const Header = () =>{
 
             <nav className="Nav">
 
-                <Link to={"/productos"} className="Links">productos</Link>
+                <Link to={"/"} className="Links">productos</Link>
                 <NavDropdown title="Categorias"className="drop">
                     <li><Link to={"/productos/placas"} className="LinksDrop">Placas de video</Link></li>
                     <li><Link to={"/productos/monitores"} className="LinksDrop">Monitores</Link></li>

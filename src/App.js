@@ -4,47 +4,31 @@ import  { Header } from './components/Header/Header';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import {ItemDetailContainer} from "./components/ItemDetailContainer/ItemDetailContaines"
-import {CartContext} from "./components/CartContext/CartContext"
-import { useState } from 'react';
+import {CartProvaider} from "./Context/CartContext/CartContext"
+import {Cart} from './components/Cart/Cart'
 
 function App() {
 
-  const [cart,setcart] = useState([])
-
-  const agreagarCarrito = (item) =>{
-    setcart([...cart,item])
-
-  }
-
-  const EstaEnCarrito = (id) =>{
-    return cart.some((item) => item.id === id)
-  }
-
   return (
-
     <div className="App">
 
-      <CartContext.Provider value={ {
-        cart,
-        agreagarCarrito,
-        EstaEnCarrito
-      } }>
+      <CartProvaider>
 
         <BrowserRouter>
-
           <Header/>
-        
           <Routes>
 
-            <Route path='/productos' element = {<ItemListContainer/>}/>
+            <Route path='/' element = {<ItemListContainer/>}/>
             <Route path='/productos/:Category' element = {<ItemListContainer/>}/>
             <Route path='/Item/:categoryId' element = {<ItemDetailContainer/>}/>
+            <Route path= '/Cart' element={<Cart/>}/>
 
   
           </Routes>
         
         </BrowserRouter>
-      </CartContext.Provider>
+
+      </CartProvaider>
 
     </div>
   );

@@ -3,11 +3,3 @@ body{
     color: aliceblue;
 }
 
-.CartItem{
-    position: absolute;
-    right: 20px;
-    top: 40px;
-    font-size: 25px;
-    padding-right: 15px;
-
-}

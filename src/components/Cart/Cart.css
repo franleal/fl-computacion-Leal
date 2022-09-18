@@ -1,0 +1,25 @@
+.cartContainer{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.Cart_hr{
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 10px;
+    color: rgb(255, 153, 0);
+    box-shadow: 10px 5px 5px rgb(255, 159, 14);
+}
+
+.CartTitle{
+    font-size: 60px;
+    text-align: center;
+    color: rgb(255, 184, 77);
+    
+}
+
+.Cart_P{
+    font-size: 20px;
+}
