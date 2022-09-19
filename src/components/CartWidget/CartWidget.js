@@ -7,13 +7,15 @@ import '../CartWidget/CartWidget.css'
 
 export const Carrito = () =>{
 
-    const {cartQuantity}=useContext(CartContext)
+    const {cartQuantity,cart}=useContext(CartContext)
 
     return(
         <div>
 
-            <Link to={'/Cart'} className='CartItem'><FaCartPlus/> </Link>
-            <spam className='CartItem_spam'>{cartQuantity()}</spam>
+            <Link to='/Cart' className={`CartItemFalse ${cart.length>0 ? 'CartItemTrue':''}`}>
+                <FaCartPlus/> 
+                <spam className='CartItem_spam'>{cartQuantity()}</spam>
+            </Link>
 
         </div>
         

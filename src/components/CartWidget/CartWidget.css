@@ -1,18 +1,29 @@
-.CartItem{
+
+
+.CartItemFalse{
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.CartItemTrue{
+    visibility: visible;
+    opacity: 1;
     position: absolute;
     right: 20px;
     top: 40px;
-    font-size: 25px;
+    font-size: 20px;
     padding-right: 15px;
     background-color: transparent;
     border: 0;
     color: white;
-
+    display: flex;
+    flex-direction: row;
+    
 }
 
 .CartItem_spam{
-    position: absolute;
-    right: 15px;
-    top: 50px;
+    margin: 5px;
+    font-size: 20px;
 }
 
