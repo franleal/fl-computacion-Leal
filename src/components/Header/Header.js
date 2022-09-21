@@ -16,6 +16,9 @@ export const Header = () =>{
                     <li><Link to={"/productos/placas"} className="LinksDrop">Placas de video</Link></li>
                     <li><Link to={"/productos/monitores"} className="LinksDrop">Monitores</Link></li>
                     <li><Link to={"/productos/procesadores"} className="LinksDrop">Procesadores</Link></li>
+                    <li><Link to={"/productos/placasMadres"} className="LinksDrop">Placas Madres</Link></li>
+                    <li><Link to={"/productos/ram"} className="LinksDrop">Memorias Ram</Link></li>
+                    <li><Link to={"/productos/gabinetes"} className="LinksDrop">Gabinetes</Link></li>
                 </NavDropdown>
                 <Link to className="Links">PC armada</Link>
             </nav>

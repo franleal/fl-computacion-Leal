@@ -1,8 +1,9 @@
 import { useState,useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { llamadoItem } from "../../funcionesExtras/LlamadoItems"
 import {ItemDetail} from "../ItemDetail/ItemDetail"
 import "./ItemDetailContainer.css"
+import {doc,getDoc} from "firebase/firestore"
+import { db } from "../../FireBase/Config"
 
 
 export const ItemDetailContainer = () =>{
@@ -13,18 +14,13 @@ export const ItemDetailContainer = () =>{
     
 
     useEffect(()=>{
-        llamadoItem()
-            .then ((resp) => {
-                setItemDetailC(resp.find((prod) => prod.id === Number(categoryId)))
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-            .finally(()=>{
+        const docRef = doc(db,'productos',categoryId)
 
+        getDoc(docRef)
+            .then((doc)=>{
+                setItemDetailC({id: doc.id, ...doc.data()})
             })
-
-    },[categoryId])
+    },[])
 
     return( 
         <div className="itemDetailC">
