@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export const CartContext = createContext()
 
@@ -27,6 +28,16 @@ export const CartProvaider = ({children}) => {
         setCart([])
     }
 
+    const terminarCompra = (id) =>{
+        Swal.fire({
+            title: "Compra exitosa!",
+            text: `Numero de compra: ${id}`,
+            icon: 'success'
+        })
+        setCart([])
+       
+    }
+
     const removeCartItem = (id) => {  
         setCart(cart.filter((itemC) => itemC.id !== id ))
     }
@@ -39,7 +50,8 @@ export const CartProvaider = ({children}) => {
             cartQuantity, 
             cartTotal,
             removeCart,
-            removeCartItem
+            removeCartItem,
+            terminarCompra
             } }>
                 {children}
 
