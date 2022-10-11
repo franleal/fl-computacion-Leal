@@ -1,0 +1,46 @@
+.checkOut_context{
+    background-color: rgb(29, 29, 29);
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.checkOut_Title{
+    font-size: 50px;
+    margin: 10px;
+}
+
+.checkOut_p{
+    font-size: 20px;
+}
+
+.checkOut_form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.checkOut_input{
+    width: 400px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.checkOut_enviar{
+    background-color: transparent;
+    width: 400px;
+    margin: 10px;
+    color: aliceblue;
+    border: 2px solid rgb(255, 115, 0);
+}
+
+.checkOut_enviar:hover{
+    background-color: rgb(195, 88, 0);
+    box-shadow: 0 0 10px  rgb(255, 115, 0), 0 0 10px  rgb(255, 115, 0), 0 0 10px  rgb(255, 115, 0); 
+}
+

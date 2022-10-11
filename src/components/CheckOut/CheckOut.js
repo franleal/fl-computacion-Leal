@@ -4,6 +4,7 @@ import { useContext } from "react"
 import { Navigate } from "react-router-dom"
 import { addDoc,collection } from "firebase/firestore"
 import { db } from "../../FireBase/Config"
+import "../CheckOut/CheckOut.css"
 
 
 export const Checkout = () =>{
@@ -11,6 +12,8 @@ export const Checkout = () =>{
     const{cart,cartTotal,terminarCompra} = useContext(CartContext) 
 
     const [value,setValue] = useState({
+        tarjeta:'',
+        codigo:'',
         nombre:'',
         email:'',
         telefono:'',
@@ -61,17 +64,20 @@ export const Checkout = () =>{
 
 
     return(
-        <div>
-            <h2>Check Out</h2>
-
-            <form onSubmit={handleSubmit}>
-                <input type={'text'} placeholder='Nombre' onChange={handleInputChange} value={value.nombre} name='nombre'/>
-                <input type={'text'} placeholder='Apellido' onChange={handleInputChange} value={value.apellido} name='apellido'/>
-                <input type={'email'} placeholder='Email' onChange={handleInputChange} value={value.email} name='email'/>
-                <input type={'tel'} placeholder='Telefeno' onChange={handleInputChange} value={value.telefono} name='telefono'/>
-                <input type={'text'} placeholder='Direccion' onChange={handleInputChange} value={value.direccion} name='direccion'/>
+        <div className="checkOut_context">
+            <h2 className="checkOut_Title">Check Out</h2>
+            <p className="checkOut_p">Ingrese sus datos para terminar con la compra</p>
+            <form onSubmit={handleSubmit} className="checkOut_form">
+                <input type={'number'} placeholder='Numero de tarjeta' onChange={handleInputChange} value={value.tarjeta} name='tarjeta' className="checkOut_input"/>
+                <input type={'number'} placeholder='codigo de seguridad de tarjeta' onChange={handleInputChange} value={value.codigo} name='codigo' className="checkOut_input"/>
+                <input type={'text'} placeholder='Nombre' onChange={handleInputChange} value={value.nombre} name='nombre' className="checkOut_input"/>
+                <input type={'text'} placeholder='Apellido' onChange={handleInputChange} value={value.apellido} name='apellido' className="checkOut_input"/>
+                <input type={'email'} placeholder='Email' onChange={handleInputChange} value={value.email} name='email' className="checkOut_input"/>
+                <input type={'tel'} placeholder='Telefeno' onChange={handleInputChange} value={value.telefono} name='telefono' className="checkOut_input"/>
+                <input type={'text'} placeholder='Direccion' onChange={handleInputChange} value={value.direccion} name='direccion' className="checkOut_input"/>
                 
-                <button type="submit" className="btn btn-primary">Enviar</button>
+                
+                <button type="submit" className="checkOut_enviar">Enviar</button>
             </form>
         </div>
     )

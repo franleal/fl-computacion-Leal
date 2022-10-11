@@ -10,7 +10,6 @@ export const ItemDetail = ({itemC}) =>{
     const {cart,agreagarCarrito,EstaEnCarrito} = useContext (CartContext)
     console.log(cart)
     
-    
     const [cantidad,setcantidad] = useState(0)
     
     
@@ -19,8 +18,6 @@ export const ItemDetail = ({itemC}) =>{
             <h2>cargando...</h2>
         )
     }
-
-
 
     const addCart = () =>{
         const cartInfo = {
@@ -36,23 +33,27 @@ export const ItemDetail = ({itemC}) =>{
         
     }
 
-    
-
     return(
         
         <div>
-            <hr/>
-
-            <div className="itemDetail">
+            
+            <div className="itemDetail animation_itemDetail">
                 <img src={itemC.img} className="img"></img>
 
                 <div className="itemDetailInfo">
                     
                     <h3 className="tituloProducto">{itemC.nombre}</h3>
-                    <p className="info">Precio: ${itemC.precio}</p>
-                    <p className="info">Stock Disponible: {itemC.stock}</p>
 
-                    <p className="info">descripcion: {itemC.descripcion}</p>
+                    <div className="info_container">
+                        <p className="info">Precio: ${itemC.precio}</p>
+                        <p className="info">Stock Disponible: {itemC.stock}</p> 
+                    </div>
+
+                    <hr className="hr_interno"/>
+                    
+                    <p className="description"> {itemC.descripcion}</p>
+
+                    <hr className="hr_interno"/>
 
                     {
                         EstaEnCarrito(itemC.id)
@@ -60,12 +61,10 @@ export const ItemDetail = ({itemC}) =>{
                         :   <Counter maxStock={itemC.stock} Initial={0} counter={cantidad} setCounter={setcantidad} agregar={addCart}/>
                     }
                     
-
-                    
                 </div>
             </div>
 
-            <hr/>
+            <hr className="hr_item"/>
 
         </div>
     )

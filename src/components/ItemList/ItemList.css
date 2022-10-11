@@ -3,4 +3,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+}
+
+.productos_title{
+    font-size: 50px;
+    text-align: center;
+    
 }

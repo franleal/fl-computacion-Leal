@@ -9,8 +9,7 @@
     width: 90%;
     margin-top: 30px;
     margin-left: 10px;
-    color: rgb(255, 153, 0);
-    box-shadow: 10px 5px 5px rgb(255, 159, 14);
+    color: rgb(255, 128, 0);
 }
 
 .CartTitle{
@@ -22,4 +21,39 @@
 
 .Cart_P{
     font-size: 20px;
+}
+
+.boton_vaciar{
+    background-color: transparent;
+    color: antiquewhite;
+    border-radius: 10px;
+    border: 1px solid red;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.boton_vaciar:hover{
+    background-color: rgb(191, 44, 44);
+    box-shadow: 0 0 10px  red, 0 0 10px  red, 0 0 10px  red; 
+}
+
+.boton_terminar{
+    background-color: rgb(91, 188, 91);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 100px;
+    height: 60px;
+    margin: 10px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.boton_terminar:hover{
+    box-shadow: 0 0 10px  rgb(3, 251, 3), 0 0 10px  rgb(3, 251, 3), 0 0 10px  rgb(3, 251, 3); 
+}
+
+.Cart_h3{
+    margin-top: 10px;
+    color:rgb(255, 184, 77) ;
 }

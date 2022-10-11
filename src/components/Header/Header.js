@@ -19,8 +19,10 @@ export const Header = () =>{
                     <li><Link to={"/productos/placasMadres"} className="LinksDrop">Placas Madres</Link></li>
                     <li><Link to={"/productos/ram"} className="LinksDrop">Memorias Ram</Link></li>
                     <li><Link to={"/productos/gabinetes"} className="LinksDrop">Gabinetes</Link></li>
+                    
+                    
                 </NavDropdown>
-                <Link to className="Links">PC armada</Link>
+                <Link to ={"/productos/pcarmada"} className="Links">PC armada</Link>
             </nav>
 
             <Carrito/>

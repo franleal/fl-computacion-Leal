@@ -7,7 +7,8 @@ import  Item  from "../Item/Item"
 export const ItemList = ({productos = []}) =>{
     return(
         <div className="ItemContainer">
-            <h2>Productos</h2>
+            <h2 className="productos_title">Productos</h2>
+            <hr></hr>
 
             <div className="ItemContainer__Child">
                 {productos.map((prod) => {

@@ -20,24 +20,29 @@ export const Cart = () =>{
         )
     }
 
+
+
     return(
         <div className="cartContainer">
-            <p className="CartTitle">Mi Carrito</p>
+            <div>
+                <p className="CartTitle">Mi Carrito</p>
 
-           { cart.map((itemC) => (
-                <div key={itemC.id} className="Cart">
+                { cart.map((itemC) => (
+                    <div key={itemC.id} className="Cart">
 
-                    <h1 className="Cart_h1">{itemC.Nombre}</h1>
-                    <p className="Cart_P">Precio: {itemC.precio}</p>
-                    <p className="Cart_P">Cantidad: {itemC.cantidad}</p>
-                    <button onClick={() => removeCartItem(itemC.id)} className="btn btn-danger"><BsFillTrashFill/></button>
-                    <hr className="Cart_hr" />
+                        <h1 className="Cart_h1">{itemC.Nombre}</h1>
+                        <p className="Cart_P">Precio por unidad: {itemC.precio}</p>
+                        <p className="Cart_P">Cantidad: {itemC.cantidad}</p>
+                        <button onClick={() => removeCartItem(itemC.id)} className="btn btn-danger"><BsFillTrashFill/></button>
+                        <hr className="Cart_hr" />
+                        
 
-                </div>
-            ))}
-            <button onClick={removeCart} className="btn btn-danger" >Vaciar carrito</button>
-            <Link to='/CheckOut' className="btn btn-succes" >Terminar mi compra</Link>
-            <h3 className="Cart_h3">Total: ${cartTotal()}</h3>
+                    </div>
+                ))}
+                <button onClick={removeCart} className="boton_vaciar" >Vaciar carrito</button>
+                <Link to= {'/CheckOut'} className="boton_terminar" >Terminar mi compra</Link>
+                <h3 className="Cart_h3">Total: ${cartTotal()}</h3>
+            </div>    
         </div>
     )
 }

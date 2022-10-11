@@ -11,8 +11,8 @@ import {Checkout} from './components/CheckOut/CheckOut'
 function App() {
 
   return (
-    <div className="App">
-
+    <div className="">
+      
       <CartProvaider>
 
         <BrowserRouter>
@@ -24,6 +24,7 @@ function App() {
             <Route path='/Item/:categoryId' element = {<ItemDetailContainer/>}/>
             <Route path= '/Cart' element={<Cart/>}/>
             <Route path= '/CheckOut' element={<Checkout/>}/>
+            <Route path= '/productos/:Category' element={<ItemDetailContainer/>}/>
 
 
   

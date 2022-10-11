@@ -1,3 +1,54 @@
 .CounterContainer{
-    margin-top:350px ;
+    margin-top:10px ;
+}
+
+.counter_title{
+    font-size: 25px;
+
+}
+
+.span-counter{
+    font-size: 20px;
+}
+
+.boton-agregar{
+    margin-left: 15px ;
+    border-radius: 10px ;
+    font-size: 18px;
+    border: 1px solid rgb(45, 241, 255);
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+.boton-agregar:hover{
+    background-color: rgb(31, 143, 151);
+    box-shadow: 0 0 10px rgb(45, 241, 255), 0 0 15px rgb(45, 241, 255), 0 0 15px rgb(45, 241, 255);
+}
+
+.boton_menos{
+    background-color: transparent;
+    border: 1px solid red;
+    font-size: 15px;
+}
+
+.boton_menos:hover{
+    background-color: rgb(248, 47, 47);
+    box-shadow: 0 0 10px rgb(239, 10, 10), 0 0 15px rgb(239, 10, 10), 0 0 15px rgb(239, 10, 10);
+}
+
+.boton_mas{
+    background-color: transparent;
+    border: 1px solid rgb(10, 255, 26);
+    font-size: 15px;
+}
+
+.boton_mas:hover{
+    background-color: rgb(44, 151, 51);
+    box-shadow: 0 0 10px rgb(10, 255, 26), 0 0 15px rgb(10, 255, 26), 0 0 15px rgb(10, 255, 26);
+}
+
+.botonera{
+    display: block;
+    width: 300px;
+    height: 100px;
 }

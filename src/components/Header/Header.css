@@ -1,18 +1,20 @@
 .Header{
-    background-color: rgb(175, 89, 89);
+    background-color: rgb(255, 132, 0);
    display: flex;
    flex-wrap: wrap;
    height: 100px;
 }
 
 .Nav{
-    width: 700px;
+    width: 900px;
     height: 50%;
-    margin-right:600px;
-    margin-top: 20px;
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
     flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
 
@@ -21,11 +23,15 @@
     margin-right:50px;
     margin-left: 20px;
     margin-top: 30px;
-    font-size: 35px;
+    font-size: 30px;
+    color: rgb(255, 240, 240);
+    font-family: 'Press Start 2P', cursive;
+    
 }
 
 .Links{
     margin: 20px;
+    font-size: 25px;
 }
 
 .drop{
@@ -37,18 +43,24 @@
 .LinksDrop{
     margin: 5px;
     text-decoration: none;
-    color: black;
+    color: rgb(29, 29, 29);
     
 }
 
 
 a:visited,a:active,a:link,a:hover{
-    color: rgb(255, 247, 247);
+    color: rgb(29, 29, 29);
     text-decoration: none;
+}
+
+.Title:visited,Title:active,Title:link,Title:hover{
+    color: rgb(29, 29, 29);
+    text-decoration: none;
+    
 }
 
 
 .LinksDrop:visited,.LinksDrop:active,.LinksDrop:link,.LinksDrop:hover{
-    color: rgb(0, 0, 0);
+    color: rgb(29, 29, 29);
 
 }

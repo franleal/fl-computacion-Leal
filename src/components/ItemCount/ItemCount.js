@@ -18,17 +18,16 @@ export const Counter = ({maxStock,Initial, counter, setCounter, agregar}) =>{
     }
 
     
-
     return(
         <div className="CounterContainer">
-            <p>Agregar producos</p>
-
-            <Button variant="success" onClick={incremento}>+</Button>{' '}
-            <span className='span-counter'>{counter}</span>
-            <Button variant="danger" onClick={restar}>-</Button>{' '}
-
-            
-            <Button variant="outline-primary" className='boton-agregar' onClick={agregar}>Agregar al carrito</Button>
+            <p className='counter_title'>Agregar producos</p>
+            <div className='botonera'>
+                <Button className='boton_menos' onClick={restar}>-</Button>{' '}
+                <span className='span-counter'>{counter}</span>
+                <Button className='boton_mas' onClick={incremento}>+</Button>{' '}
+                
+                <button className='boton-agregar' onClick={agregar}>Agregar al carrito</button> 
+            </div>
             
             
         </div>
