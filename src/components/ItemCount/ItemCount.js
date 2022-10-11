@@ -25,8 +25,7 @@ export const Counter = ({maxStock,Initial, counter, setCounter, agregar}) =>{
                 <Button className='boton_menos' onClick={restar}>-</Button>{' '}
                 <span className='span-counter'>{counter}</span>
                 <Button className='boton_mas' onClick={incremento}>+</Button>{' '}
-                
-                <button className='boton-agregar' onClick={agregar}>Agregar al carrito</button> 
+                <button className='boton-agregar' onClick={agregar} >Agregar al carrito</button> 
             </div>
             
             

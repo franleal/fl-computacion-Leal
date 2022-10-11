@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../Context/CartContext/CartContext"
 import { Counter } from "../ItemCount/ItemCount"
+import { Loaders } from "../Loader/Loader"
 import "./ItemDetail.css"
 
 
@@ -15,7 +16,7 @@ export const ItemDetail = ({itemC}) =>{
     
     if (!itemC){
         return(
-            <h2>cargando...</h2>
+            <Loaders/> 
         )
     }
 
@@ -55,11 +56,15 @@ export const ItemDetail = ({itemC}) =>{
 
                     <hr className="hr_interno"/>
 
+                    
+
                     {
                         EstaEnCarrito(itemC.id)
                         ?   <Link to="/cart" className="btn btn-success my-2">Terminar compra</Link>
-                        :   <Counter maxStock={itemC.stock} Initial={0} counter={cantidad} setCounter={setcantidad} agregar={addCart}/>
+                        :<Counter maxStock={itemC.stock} Initial={0} counter={cantidad} setCounter={setcantidad} agregar={addCart}/>
                     }
+
+                    
                     
                 </div>
             </div>
